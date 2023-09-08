@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		<title>aka</title>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+		<title>Redirecting ...</title>
 	</head>
 	<body>
 		<script>
 		var aka=window.location.href.substring(window.location.href.indexOf("?")+1,window.location.href.length)
-		window.location.href="https://static-mp-ebf22fa9-3189-4433-a516-6cc1fa132879.next.bspapp.com/aka/?"+aka;
-		//
+		var name=aka.substring(0,aka.indexOf('?')==-1?aka.length:aka.indexOf('?')).toLowerCase();
+		if(name=="word")			hf="https://static-mp-ebf22fa9-3189-4433-a516-6cc1fa132879.next.bspapp.com/word/";
+		if(name=="vhw")				hf="https://powerhg.github.io/vhw/";
+		if(name=="sheet")			hf="https://berniehuang2008.github.io/PowerSheet/PowerSheet.html";
+		if(name=="pres")			hf="https://berniehuang2008.github.io/PowerPres/PowerPres.html";
+		window.location.href=hf+(aka.indexOf('?')==-1?'':aka.substring(aka.indexOf('?'),aka.length));
 		</script>
-	</body>
-</html>
+	
+
+</body></html>
